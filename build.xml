@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="someProject" default="generateDDL">
+    <description>DDL generation</description>
+    <target name="generateDDL">
+        <mkdir dir="${basedir}/target/generated-sources/schema" />
+        <taskdef name="hibernatetool" classname="org.hibernate.tool.ant.HibernateToolTask" />
+        <hibernatetool destdir="${basedir}/target/generated-sources">
+            <classpath refid="maven.compile.classpath" />
+            <annotationconfiguration configurationfile="${basedir}/src/main/resources/hibernate.cfg.xml"/>
+            <hbm2ddl drop="true" create="true" export="${export}" 
+                    outputfilename="schema.ddl" delimiter=";" format="true" />
+        </hibernatetool>
+    </target>
+</project>
+
