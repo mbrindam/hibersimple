@@ -6,6 +6,12 @@ import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Table;
 
+/**
+ * This is a hibernate-annotated class representing a person.
+ * 
+ * @author mbrindam
+ *
+ */
 @Entity
 @Table (name="PERSON")
 public class Person implements Serializable {
@@ -21,6 +27,10 @@ public class Person implements Serializable {
 	
 	private String lastName;
 
+	/**
+	 * Get the database ID of this object.
+	 * @return long id of this object
+	 */
 	@Id
 	@GeneratedValue
 	public long getId() {
@@ -31,6 +41,10 @@ public class Person implements Serializable {
 		this.id = id;
 	}
 
+	/**
+	 * Get the Person's first name.
+	 * @return String representing the First Name.
+	 */
 	public String getFirstName() {
 		return firstName;
 	}
@@ -39,6 +53,10 @@ public class Person implements Serializable {
 		this.firstName = firstName;
 	}
 
+	/**
+	 * Get the person's last name.
+	 * @return String representing Last Name.
+	 */
 	public String getLastName() {
 		return lastName;
 	}

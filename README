@@ -1,3 +1,6 @@
 mvn clean compile exec:java -Dexec.mainClass=com.mbrindam.hibersimple.App
 mvn process-classes
 
+mvn javadoc:javadoc - creates javadoc in {base}/target/site/apidocs
+mvn test - runs tests located in src/test/**/**.java
+

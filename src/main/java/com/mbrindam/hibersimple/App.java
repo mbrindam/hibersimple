@@ -5,15 +5,14 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
 /**
- * Hello world!
+ * This is an extremely simple app that demonstrates hibernate annotations, auto-ddl
+ * and a few simple hibernate calls.
  *
  */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
-
         SessionFactory sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
 
         Session session = sessionFactory.getCurrentSession();
