@@ -1,0 +1,3 @@
+mvn clean compile exec:java -Dexec.mainClass=com.mbrindam.hibersimple.App
+mvn process-classes
+
